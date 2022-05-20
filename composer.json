@@ -4,11 +4,6 @@
     "keywords": ["promise", "cep", "correios", "viacep", "cepaberto", "cep aberto", "php"],
     "license": "MIT",
     "authors": [
-        {
-            "name": "Claudson Martins",
-            "email": "claudson@outlook.com",
-            "homepage": "https://github.com/claudsonm"
-        }
     ],
     "require": {
         "php": "^7.0|8.*",
