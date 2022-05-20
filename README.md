@@ -158,10 +158,4 @@ Array
 
 Um muito obrigado a todos os serumaninhos que contribuiram com este repositório:
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
-<table><tr><td align="center"><a href="https://github.com/claudsonm"><img src="https://avatars3.githubusercontent.com/u/4139808?v=4" width="100px;" alt="Claudson Martins"/><br /><sub><b>Claudson Martins</b></sub></a><br /><a href="#projectManagement-claudsonm" title="Project Management">📆</a> <a href="#maintenance-claudsonm" title="Maintenance">🚧</a> <a href="https://github.com/claudsonm/cep-promise-php/commits?author=claudsonm" title="Code">💻</a> <a href="https://github.com/claudsonm/cep-promise-php/commits?author=claudsonm" title="Documentation">📖</a> <a href="#example-claudsonm" title="Examples">💡</a> <a href="#business-claudsonm" title="Business development">💼</a> <a href="#tutorial-claudsonm" title="Tutorials">✅</a></td></tr></table>
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
 Este projeto segue a especificação do [all-contributors](https://github.com/all-contributors/all-contributors). Contribuições de qualquer natureza são bem vindas!
