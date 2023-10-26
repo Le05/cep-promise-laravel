@@ -20,8 +20,7 @@ class CorreiosProvider extends BaseProvider
     /**
      * Cria a Promise para obter os dados de um CEP no provedor do serviço.
      *
-     * @param string $cep
-     *
+     * @param  string  $cep
      * @return \GuzzleHttp\Promise\Promise
      */
     public function makePromise(string $cep)
@@ -64,6 +63,7 @@ class CorreiosProvider extends BaseProvider
                     'city' => $responseArray['cidade'],
                     'district' => $responseArray['bairro'],
                     'street' => $responseArray['end'],
+                    'provider' => $this->providerIdentifier,
                 ];
             }
 
@@ -78,8 +78,11 @@ class CorreiosProvider extends BaseProvider
                 $xmlString = $exception->getResponse()->getBody()->getContents();
                 $fault = $this->soapXmlToArray($xmlString);
                 $defaultMessage = 'Erro ao se conectar com o serviço dos Correios.';
+                $message = isset($fault['soapBody']['soapFault']['faultstring'])
+                    ? utf8_decode($fault['soapBody']['soapFault']['faultstring'])
+                    : $defaultMessage;
 
-                throw new Exception($fault['soapBody']['soapFault']['faultstring'] ?? $defaultMessage);
+                throw new Exception($message);
             }
 
             throw $exception;
@@ -90,11 +93,10 @@ class CorreiosProvider extends BaseProvider
      * Converte a string de um XML SOAP em um array, removendo os dois pontos
      * de tags no formato <xxx:yyy>.
      *
-     * @param string $xml
+     * @param  string  $xml
+     * @return array
      *
      * @throws \Exception
-     *
-     * @return array
      */
     private function soapXmlToArray(string $xml)
     {

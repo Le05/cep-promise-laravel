@@ -10,7 +10,7 @@ use Psr\Http\Message\ResponseInterface;
 
 class CepAbertoProvider extends BaseProvider
 {
-    const CEP_ABERTO_TOKEN = '37d718d2984e6452584a76d3d59d3a26';
+    public const CEP_ABERTO_TOKEN = '37d718d2984e6452584a76d3d59d3a26';
 
     /**
      * O nome identificador do provedor de serviço.
@@ -22,13 +22,12 @@ class CepAbertoProvider extends BaseProvider
     /**
      * Cria a Promise para obter os dados de um CEP no provedor do serviço.
      *
-     * @param string $cep
-     *
+     * @param  string  $cep
      * @return \GuzzleHttp\Promise\Promise
      */
     public function makePromise(string $cep)
     {
-        $url = "http://www.cepaberto.com/api/v2/ceps.json?cep=$cep";
+        $url = "https://www.cepaberto.com/api/v3/cep?cep=$cep";
         $httpVerb = 'GET';
         $options = [
             'headers' => [
@@ -74,6 +73,7 @@ class CepAbertoProvider extends BaseProvider
                 'city' => $responseArray['cidade'],
                 'district' => $responseArray['bairro'],
                 'street' => $responseArray['logradouro'],
+                'provider' => $this->providerIdentifier,
             ];
         };
     }

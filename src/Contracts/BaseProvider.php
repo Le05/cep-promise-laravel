@@ -28,19 +28,15 @@ abstract class BaseProvider implements ProviderInterface
      */
     protected $promise;
 
-    /**
-     * Construtor da classe.
-     */
-    protected function __construct()
+    public function __construct(Client $client = null)
     {
-        $this->client = new Client();
+        $this->client = $client ?? new Client();
     }
 
     /**
      * Retorna um array associativo com o identificador do provider e a Promise.
      *
      * @param $cep
-     *
      * @return array
      */
     public static function createPromiseArray($cep)

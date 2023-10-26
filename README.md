@@ -1,10 +1,10 @@
 # CEP Promise PHP
-[![Build Status](https://travis-ci.org/claudsonm/cep-promise-php.svg?branch=master)](https://travis-ci.org/claudsonm/cep-promise-php)
-[![StyleCI](https://github.styleci.io/repos/177436507/shield?branch=master)](https://github.styleci.io/repos/177436507)
-![Packagist](https://img.shields.io/packagist/dt/claudsonm/cep-promise-php?style=flat-square)
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+[![Run Tests](https://github.com/claudsonm/cep-promise-php/actions/workflows/run-tests.yml/badge.svg)](https://github.com/claudsonm/cep-promise-php/actions/workflows/run-tests.yml)
+[![Check & fix styling](https://github.com/claudsonm/cep-promise-php/actions/workflows/php-cs-fixer.yml/badge.svg)](https://github.com/claudsonm/cep-promise-php/actions/workflows/php-cs-fixer.yml)
+![Packagist](https://img.shields.io/packagist/dt/claudsonm/cep-promise-php)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg)](#contributors)
 
-Um pacote agnóstico para PHP 7.0+ que efetua a busca de CEPs em diversos serviços utilizando [Promises/A+](https://promisesaplus.com/). 
+Um pacote agnóstico para PHP 7.4 e 8.0+ que efetua a busca de CEPs em diversos serviços utilizando [Promises/A+](https://promisesaplus.com/). 
 Inspirado no pacote [CEP Promise](https://github.com/filipedeschamps/cep-promise) 
 para Node.js e web browsers.
 
@@ -157,5 +157,11 @@ Array
 ## Contribuidores
 
 Um muito obrigado a todos os serumaninhos que contribuiram com este repositório:
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table><tr><td align="center"><a href="https://github.com/claudsonm"><img src="https://avatars3.githubusercontent.com/u/4139808?v=4" width="100px;" alt="Claudson Martins"/><br /><sub><b>Claudson Martins</b></sub></a><br /><a href="#projectManagement-claudsonm" title="Project Management">📆</a> <a href="#maintenance-claudsonm" title="Maintenance">🚧</a> <a href="https://github.com/claudsonm/cep-promise-php/commits?author=claudsonm" title="Code">💻</a> <a href="https://github.com/claudsonm/cep-promise-php/commits?author=claudsonm" title="Documentation">📖</a> <a href="#example-claudsonm" title="Examples">💡</a> <a href="#business-claudsonm" title="Business development">💼</a> <a href="#tutorial-claudsonm" title="Tutorials">✅</a></td></tr></table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 Este projeto segue a especificação do [all-contributors](https://github.com/all-contributors/all-contributors). Contribuições de qualquer natureza são bem vindas!

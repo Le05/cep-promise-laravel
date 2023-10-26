@@ -45,10 +45,16 @@ class Address
     public $zipCode;
 
     /**
-     * Cria uma nova instância da classe a partir de um array associativo.
+     * A identificação do provider que retornou os dados do endereço.
      *
-     * @param array $data
+     * @var string
+     */
+    public $provider;
+
+    /**
+     * Cria uma instância da classe a partir de um array associativo.
      *
+     * @param  array  $data
      * @return Address
      */
     public static function create(array $data = [])

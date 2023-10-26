@@ -20,8 +20,7 @@ class ViaCepProvider extends BaseProvider
     /**
      * Cria a Promise para obter os dados de um CEP no provedor do serviço.
      *
-     * @param string $cep
-     *
+     * @param  string  $cep
      * @return \GuzzleHttp\Promise\Promise
      */
     public function makePromise(string $cep)
@@ -54,7 +53,7 @@ class ViaCepProvider extends BaseProvider
     private function checkForViaCepError()
     {
         return function (array $responseArray) {
-            if (isset($responseArray['erro']) && true === $responseArray['erro']) {
+            if (isset($responseArray['erro'])) {
                 throw new Exception('CEP não encontrado na base do ViaCEP.');
             }
 
@@ -71,6 +70,7 @@ class ViaCepProvider extends BaseProvider
                 'city' => $responseArray['localidade'],
                 'district' => $responseArray['bairro'],
                 'street' => $responseArray['logradouro'],
+                'provider' => $this->providerIdentifier,
             ];
         };
     }
